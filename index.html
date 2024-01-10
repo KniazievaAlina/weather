@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <div class="container title">
+            <h1>MY WEATHER</h1>
+            <div class="input-container">
+                <input type="text" placeholder="City" id="inputCity">
+                <button id="searchBtn">Пошук</button>
+            </div>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="container menu">
+            <div class="item_menu active" id="weatherToday tab" onclick="openTab(event, 'tab1')">
+                <h4>Today</h4>
+            </div>
+            <div class="item_menu" id="weatherForecast tab" onclick="openTab(event, 'tab2')">
+                <h4>5-day forecast</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container  tab-content" id="tab1">
+        <div class="weather_today">
+            <div class="current_weather">
+                <!-- <h2 class="weather__city">Город</h2> -->
+                <div class="item1">
+                    <h2>CURRENT WEATHER</h2>
+                    <h3 class="weather__date"></h3>
+                </div>
+                <div class="item2">
+                    <div class="item21">
+                        <div class="weather__icon"></div>
+                        <p class="weather__description"></p>
+                    </div>
+                    <div class="item22">
+                        <h2 class="weather__temp">°C</h2>
+                        <p class="weather__feels">°C</p>
+                    </div>
+                    <div class="item23">
+                        <div class="item231">
+                            <p>Sunrise:</p>
+                            <p>Sunset:</p>
+                            <p>Duration:</p>
+                        </div>
+                        <div class="item231">
+                            <p class="sunrise"></p>
+                            <p class="sunset"></p>
+                            <p class="duration"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hourly_weather">
+                <h2>HOURLY</h2>
+                <div class="table-container">
+                    <table id="hourlyTable">
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container tab-content" id="tab2">
+        <div class="weather_forecast">
+            <div class="weather_forecast_item1">
+                <div class="block_forecast forecast1" >
+                    <h3 class="forecast_weekday">день тиждня</h3>
+                    <p class="forecast_date">дата</p>
+                    <div class="forecast_icon">icon</div>
+                    <h4 class="forecast_temp">°C</h4>
+                    <p class="forecast_main">опис прогнозу</p>
+                </div>
+            </div>
+            <div class="hourly_weather">
+                <h2>HOURLY</h2>
+                <div class="table-container">
+                    <table id="hourlyTableForecast">
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz8a-zeI2X4JwQI_SPjAtn5cSJz9Luk2I&libraries=places&callback=initMap">
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz8a-zeI2X4JwQI_SPjAtn5cSJz9Luk2I&libraries=places"></script> -->
+        <script src="app.js"></script>
+        <script src="converter.js"></script>
+</body>
+
+</html>
